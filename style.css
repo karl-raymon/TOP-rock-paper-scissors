@@ -19,7 +19,9 @@ body,
 .cover,
 .score-board,
 .choices-container,
-.card {
+.card,
+.pick-container,
+.pick-card {
   display: flex;
   align-items: center;
 }
@@ -99,5 +101,21 @@ body,
 }
 
 .result-title {
+  font-size: 24px;
+}
+
+.pick-container {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.pick-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#player-pick,
+#computer-pick {
   font-size: 24px;
 }

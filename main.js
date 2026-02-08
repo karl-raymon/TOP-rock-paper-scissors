@@ -26,7 +26,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanSelection, computerSelection) {
-  console.log(humanSelection, computerSelection);
   if (computerSelection === humanSelection) {
     console.log('tie');
   } else if (
@@ -38,6 +37,7 @@ function playRound(humanSelection, computerSelection) {
   } else {
     humanScore++;
   }
+  displayChoice(humanSelection, computerSelection);
   displayScore();
 }
 
@@ -47,6 +47,21 @@ function playGame(e) {
     playRound(playerChoice, getComputerChoice());
   }
 }
+
+function displayChoice(humanSelection, computerSelection) {
+  console.log(humanSelection, computerSelection);
+  const playerPickSpan = document.querySelector('#player-pick');
+  const computerPickSpan = document.querySelector('#computer-pick');
+  playerPickSpan.textContent =
+    humanSelection === 'rock' ? '👊' : humanSelection === 'paper' ? '🖐️' : '✌️';
+  computerPickSpan.textContent =
+    computerSelection === 'rock'
+      ? '👊'
+      : computerSelection === 'paper'
+        ? '🖐️'
+        : '✌️';
+}
+
 displayScore();
 function displayScore() {
   playerScoreDiv.textContent = humanScore;
