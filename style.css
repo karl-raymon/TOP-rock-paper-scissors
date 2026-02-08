@@ -48,9 +48,6 @@ body,
   transition: 0.5s ease-in-out;
 }
 
-/* .choices: {
-} */
-
 .choices-container {
   gap: 10px;
 }

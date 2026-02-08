@@ -6,7 +6,7 @@ const MAX_SCORE = 5;
 let isGameOver = false;
 const resultToast = document.querySelector('#result-container');
 const resetBtn = document.querySelector('#reset');
-// buttons.forEach()
+
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => playGame(e));
 });
@@ -21,10 +21,6 @@ function getComputerChoice() {
         ? 'scissors'
         : 'Invalid';
 }
-
-// function getHumanChoice(e) {
-//   return e.target.textContent.toLowerCase();
-// }
 
 let humanScore = 0;
 let computerScore = 0;
@@ -44,7 +40,7 @@ function playRound(humanSelection, computerSelection) {
   }
   displayScore();
 }
-// playGame();
+
 function playGame(e) {
   const playerChoice = e.target.id.toLowerCase();
   if (!isGameOver) {
